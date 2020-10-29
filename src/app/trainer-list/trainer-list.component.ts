@@ -22,6 +22,7 @@ export class TrainerListComponent implements OnInit {
     const newTrainer: Person = {name: this.trainerName};
     if(event.keyCode === 13) {
         this.trainerService.createTrainer(newTrainer).subscribe( newTrainer => this.trainers.push(newTrainer));
+        event.target.value = '';
     }
   }
 

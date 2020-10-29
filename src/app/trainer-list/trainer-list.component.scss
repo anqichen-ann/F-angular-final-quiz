@@ -1,7 +1,7 @@
 .trainer{
     padding: 10px 20px;
 }
-.content span{
+.content span, input{
     display: inline-block;
     width: 125px;
     height: 50px;
@@ -11,4 +11,5 @@
     text-align: center;
     padding: 0;
     margin-bottom: 10px;
+    border-style: none;
 }

@@ -3,10 +3,11 @@
     <div class="content">
         <span *ngFor="let trainee of trainees">
             {{trainee.id}}.{{trainee.name}}</span>
-    </div>
-    <input type="text" name="trainername" 
-    id="trainername" placeholder="+添加讲师" 
-    [(ngModel)]="traineeName"
-    (keyup)="handleEnter($event)"
+        <input type="text" name="trainername" 
+        id="trainername" placeholder="+添加讲师" 
+        [(ngModel)]="traineeName"
+        (keyup)="handleEnter($event)"
     >
+    </div>
+    
 </main>

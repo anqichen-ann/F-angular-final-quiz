@@ -22,7 +22,8 @@ export class TraineeListComponent implements OnInit {
     const newTrainee: Person = {name: this.traineeName};
     if(event.keyCode === 13) {
         this.traineeService.createTrainee(newTrainee).subscribe( newTrainee => this.trainees.push(newTrainee));
-    }newTrainee
+        event.target.value = '';
+    }
   }
 
 }
