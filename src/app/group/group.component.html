@@ -1,13 +1,17 @@
 <main class="group" >
-    <header>
-        <span>{{group.name}}</span>
-        <div class="trainer">
-            <span *ngFor="let trainer of group.trainers">
+    <header class="group-header">
+        <p></p>
+        <p class="group-name">{{group.name}}</p>
+        <div class="trainers">
+            <span *ngFor="let trainer of group.trainers"
+            class="trainer">
                 {{trainer.id}}.{{trainer.name}}
             </span>
         </div>
     </header>
     <div class="group-content">
-            <span *ngFor="let trainee of group.trainees">{{trainee.id}}.{{trainee.name}}</span>
+            <span
+            class="trainee"
+             *ngFor="let trainee of group.trainees">{{trainee.id}}.{{trainee.name}}</span>
     </div>
 </main>

@@ -1,3 +1,5 @@
+@import '../../variables';
+
 .trainee{
     padding: 10px 20px;
 }
@@ -5,7 +7,7 @@
     display: inline-block;
     width: 125px;
     height: 50px;
-    background-color: white;
+    background-color: $light-gray;
     line-height: 50px;
     margin-right: 20px;
     text-align: center;
