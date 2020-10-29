@@ -2,6 +2,6 @@
     <h1>分组列表</h1>
     <button (click)="group()">分组学员</button>
 </header>
-<main>
-    <app-group *ngFor="let group of groups"></app-group>
+<main *ngIf="isGroup">
+    <app-group *ngFor="let group of groups" [group]="group"></app-group>
 </main>

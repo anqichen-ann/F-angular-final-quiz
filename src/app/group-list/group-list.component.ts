@@ -10,7 +10,7 @@ import { GroupService } from '../group.service';
 })
 export class GroupListComponent implements OnInit {
   groups: Group[];
-  isGroup: boolean = false;
+  isGroup: boolean;
   constructor(private groupService: GroupService) { }
 
   ngOnInit(): void {
@@ -20,7 +20,7 @@ export class GroupListComponent implements OnInit {
     this.groupService.group().subscribe( groups => {
       this.groups = groups;
       this.isGroup = true;
-    });
+        });
   }
 
 }

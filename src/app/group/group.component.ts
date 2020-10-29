@@ -12,13 +12,9 @@ export class GroupComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.group);
   }
-  ngDoCheck(): void{
-    console.log(this.group);
-    // if(group.id){
-    //   this.getGroup = true;
-    // }
+  ngOnChanges(): void {
+    console.log(this.group)
   }
 
 }
