@@ -1,7 +1,7 @@
 <header class="header">
     <h1>分组列表</h1>
-    <button>分组学员</button>
+    <button (click)="group()">分组学员</button>
 </header>
 <main>
-    <app-group></app-group>
+    <app-group *ngFor="let group of groups"></app-group>
 </main>

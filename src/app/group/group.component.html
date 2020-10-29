@@ -1,1 +1,11 @@
-<p>group works!</p>
+<main class="group" >
+    <header>
+        <span>{{group.name}}</span>
+        <div class="trainer">
+            <span *ngFor="let trainer of group.trainers">{{trainer.id}}.{{trainer.name}</span>
+        </div>
+    </header>
+    <div class="group-content">
+        <span *ngFor="let trainee of group.trainees">{{trainee.id}}.{{trainee.name}</span>
+    </div>
+</main>
