@@ -9,11 +9,20 @@ import { TrainerService} from '../trainer.service';
 })
 export class TrainerListComponent implements OnInit {
   trainers: Person[];
+  trainerName: string;
 
-  constructor(private trainService: TrainerService) { }
+  constructor(private trainerService: TrainerService) { }
 
   ngOnInit(): void {
-    this.trainService.getUngroupedTrainers().subscribe( trainers => this.trainers = trainers);
+    this.trainerService.getUngroupedTrainers().subscribe( trainers => this.trainers = trainers);
+  }
+
+  handleEnter(event): void {
+    this.trainerName = event.target.value;
+    const newTrainer: Person = {name: this.trainerName};
+    if(event.keyCode === 13) {
+        this.trainerService.createTrainer(newTrainer).subscribe( newTrainer => this.trainers.push(newTrainer));
+    }
   }
 
 }
