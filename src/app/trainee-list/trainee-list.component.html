@@ -1,1 +1,7 @@
-<p>学员列表</p>
+<main class="trainee">
+    <h1>学员列表</h1>
+    <div class="content">
+        <span *ngFor="let trainee of trainees">
+            {{trainee.id}}.{{trainee.name}}</span>
+    </div>
+</main>
