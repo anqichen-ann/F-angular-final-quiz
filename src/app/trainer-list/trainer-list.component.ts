@@ -20,7 +20,7 @@ export class TrainerListComponent implements OnInit {
   handleEnter(event): void {
     this.trainerName = event.target.value;
     const newTrainer: Person = {name: this.trainerName};
-    if(event.keyCode === 13) {
+    if(event.keyCode === 13) { // TODO GTB-4: - magic number
         this.trainerService.createTrainer(newTrainer).subscribe( newTrainer => this.trainers.push(newTrainer));
         event.target.value = '';
     }

@@ -3,10 +3,11 @@
     <div class="content">
         <span *ngFor="let trainer of trainers">
             {{trainer.id}}.{{trainer.name}}</span>
-        <input type="text" name="trainername" 
-            id="trainername" placeholder="+添加讲师" 
+      <!-- // TODO GTB-4: - attr命名规范应该是kebab-case  -->
+        <input type="text" name="trainername"
+            id="trainername" placeholder="+添加讲师"
             [(ngModel)]="trainerName"
-            (keyup)="handleEnter($event)">
+            (keyup)="handleEnter($event)"><!-- // TODO GTB-3: - 此处可以用keyup.enter直接绑定到具体按键 -->
     </div>
-    
+
 </main>

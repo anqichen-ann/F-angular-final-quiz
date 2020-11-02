@@ -29,7 +29,7 @@ BASIC_URL: string = 'http://localhost:8080/trainers';
   }
 
 
-
+  // TODO GTB-4: - 相似处理函数可以考虑提取通用工具方法
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       console.log('An error occured: ', error.error.message);

@@ -11,6 +11,7 @@ export class GroupService {
 
   constructor(private http: HttpClient) { }
 
+  // TODO GTB-1: 分组接口应该考虑异常情况
   group(): Observable<Group[]>{
     const url: string = `${this.BASIC_URL}/auto-grouping`;
     return this.http.get<Group[]>(url);

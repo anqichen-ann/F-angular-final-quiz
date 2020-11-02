@@ -2,6 +2,7 @@
     <h1>分组列表</h1>
     <button (click)="group()">分组学员</button>
 </header>
+<!-- // TODO GTB-3: - 不应该使用ngIf控制列表是否渲染，数组初始化为空ngFor就能识别 -->
 <main *ngIf="isGroup">
     <app-group *ngFor="let group of groups" [group]="group"></app-group>
 </main>

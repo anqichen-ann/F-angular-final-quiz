@@ -10,7 +10,7 @@ import { GroupService } from '../group.service';
 })
 export class GroupListComponent implements OnInit {
   groups: Group[];
-  isGroup: boolean;
+  isGroup: boolean; // TODO GTB-4: - 变量命名不合理，逻辑不清晰
   constructor(private groupService: GroupService) { }
 
   ngOnInit(): void {
